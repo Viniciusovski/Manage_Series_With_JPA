@@ -31,6 +31,9 @@ public class Serie {
     @Transient // Anotação que evita a persistencia de determinado componente
     private List<Episodio> episodios = new ArrayList<>();
 
+    // Construtor padrão
+    public Serie(){}
+
     public Serie(DadosSerie dadosSerie){
         this.titulo = dadosSerie.titulo();
         this.totalTemporadas = dadosSerie.totalTemporadas();

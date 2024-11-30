@@ -2,20 +2,12 @@ package br.com.alura.screenmatch.service;
 
 import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.service.OpenAiService;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class ConsultaChatGPT {
-
-    //O Spring não gerencia injeções de dependências em variáveis static
-    @Value("${api.token}")
-    private String token;
-
 
     public static String obterTraducao(String texto) {
 
-        OpenAiService service = new OpenAiService("token");
+        OpenAiService service = new OpenAiService(System.getenv("OPENAI_APIKEY"));
 
         CompletionRequest requisicao = CompletionRequest.builder()
                 .model("gpt-3.5-turbo-instruct")
