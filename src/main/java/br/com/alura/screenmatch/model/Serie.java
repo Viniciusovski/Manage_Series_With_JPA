@@ -28,7 +28,8 @@ public class Serie {
     private String poster;
     private String sinopse;
 
-    @Transient // Anotação que evita a persistencia de determinado componente
+    // @Transient // Anotação que evita a persistencia de determinado componente
+    @OneToMany(mappedBy = "serie")
     private List<Episodio> episodios = new ArrayList<>();
 
     // Construtor padrão
