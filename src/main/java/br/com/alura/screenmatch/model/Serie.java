@@ -29,7 +29,16 @@ public class Serie {
     private String sinopse;
 
     // @Transient // Anotação que evita a persistencia de determinado componente
-    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL)
+
+    /*
+    Define um relacionamento um-para-muitos entre a entidade atual e outra entidade associada,
+    onde o mapeamento é controlado pelo atributo "serie" na entidade relacionada.
+    O atributo `cascade = CascadeType.ALL` propaga todas as operações (persistência, remoção, etc.)
+    realizadas na entidade pai para as entidades filhas.
+    O `fetch = FetchType.EAGER` garante que as entidades associadas sejam carregadas automaticamente
+    ao carregar a entidade pai, em vez de serem buscadas sob demanda.
+     */
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Episodio> episodios = new ArrayList<>();
 
     // Construtor padrão
@@ -58,6 +67,8 @@ public class Serie {
     }
 
     public void setEpisodios(List<Episodio> episodios) {
+        // Associar episódios a Série, pois ambas devem estar alinhadas
+        episodios.forEach(e -> e.setSerie(this));
         this.episodios = episodios;
     }
 
@@ -126,6 +137,8 @@ public class Serie {
                 ", avaliacao=" + avaliacao +
                 ", atores='" + atores + '\'' +
                 ", poster='" + poster + '\'' +
-                ", sinopse='" + sinopse + '\'';
+                ", sinopse='" + sinopse + '\''+
+                ", episodios='" + episodios + '\'';
+
     }
 }
