@@ -4,7 +4,7 @@ Welcome to the **Manage Series With JPA** project repository! This project uses 
 
 ## 📋 Description
 
-This project is designed to manage TV series, allowing users to add and view series information. It also integrates with the ChatGPT API to provide detailed descriptions and recommendations.
+This project is designed to manage TV series, allowing users to add and view series information. It also integrates with the ChatGPT API to provide detailed descriptions.
 
 ## 🚀 Features
 
