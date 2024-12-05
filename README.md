@@ -28,26 +28,4 @@ ChatGPT API
 
 🏗️ Project Structure
 
-src/
-│
-├── main/
-│   ├── java/
-│   │   └── com/
-│   │       └── example/
-│   │           └── series/
-│   │               ├── controller/
-│   │               ├── model/
-│   │               ├── repository/
-│   │               ├── service/
-│   │               └── ChatGPTIntegration.java
-│   ├── resources/
-│   │   ├── application.properties
-│   │   └── data.sql
-│   └── webapp/
-│       └── static/
-│
-└── test/
-    └── java/
-        └── com/
-            └── example/
-                └── series/
+![image](https://github.com/user-attachments/assets/ef2ff6d3-bf3a-401b-8a16-83fde103262d)
