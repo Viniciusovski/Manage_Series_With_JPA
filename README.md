@@ -15,11 +15,11 @@ This project is designed to manage TV series, allowing users to add and view ser
 
 ## 🛠️ Technologies
 
-- **Java 11**
+- **Java 17**
 - **Spring Boot**
 - **Spring Data JPA**
 - **Hibernate**
-- **MySQL/PostgreSQL** (or other relational database)
+- **PostgreSQL**
 - **ChatGPT API**
 
 ## 🏗️ Project Structure
